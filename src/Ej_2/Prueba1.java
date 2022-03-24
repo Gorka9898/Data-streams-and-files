@@ -1,5 +1,9 @@
 package Ej_2;
 
+import java.io.DataOutputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+
 public class Prueba1 {
     int max;
     int min;
@@ -18,12 +22,15 @@ public class Prueba1 {
 
 
 
-
     }
 
-    public static void addNum(int num, String name){
-
-
+    public static void addNum(int num, String fileName){
+        DataOutputStream foStream=null;
+        try {
+            foStream = new DataOutputStream(new FileOutputStream(fileName, append:true));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
 
     }
 
